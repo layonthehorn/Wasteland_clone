@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Camera2D" type="Camera2D"]
+position = Vector2( 160, 88 )
+current = true
+smoothing_enabled = true
+
+[node name="Node" type="Node" parent="."]
+
+[node name="TopLeft" type="Position2D" parent="Node"]
+
+[node name="ButtomRight" type="Position2D" parent="Node"]
