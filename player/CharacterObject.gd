@@ -6,6 +6,20 @@ const BASE_LEVEL = 1
 const BASE_BLEEDING_DAMAGE = 20
 const BASE_HEALING = 5
 const BASE_EXP = 0
+const BASE_SKILL_POINTS = 0
+const BASE_SKILL_POINTS_LEVEL = 2
+# needed exp for each level
+const REQUIRED_EXP = {
+	2: 250,
+	3: 500,
+	4: 1000,
+	5: 2000,
+	6: 2500,
+	7: 3000,
+	8: 3500,
+	9: 4000,
+	10: 5000
+}
 
 enum COMBAT_STATE {
 	ALIVE,
@@ -19,6 +33,7 @@ var level = BASE_LEVEL setget level_set, level_get
 var crit_chance = BASE_CRIT setget crit_chance_set, crit_chance_get
 var max_health = null setget max_health_set, max_health_get
 var experience = BASE_EXP setget experience_set, experience_get
+var skill_points = BASE_SKILL_POINTS setget skill_points_set, skill_points_get
 
 # we import the full stat dict when instansting the class
 #{
@@ -43,6 +58,12 @@ var stat_dict = null
 var skill_dict = null
 # character state
 var character_state = COMBAT_STATE.ALIVE
+
+func skill_points_get():
+	return skill_points
+
+func skill_points_set(value):
+	skill_points = value
 
 func experience_get():
 	return experience
@@ -109,12 +130,20 @@ func camping_healing():
 func heal_player(heal_value):
 	health = clamp(heal_value, health, max_health)
 
-# to do. 
-# recursive leveling up in case of many levels gained at once
-# or use a while loop
-func check_level_up():
-	pass
-	
+# levels the player up until they are at the correct 
+# level for their EXP
+func level_up():
+	var count = level + 1
+	while (experience >= REQUIRED_EXP.get(count)):
+		# increases your skill points as needed
+		skill_points += calc_new_skill_points()
+		# updates your max health
+		update_max_health()
+		level += 1
+		count += 1
+
+func calc_new_skill_points():
+	return BASE_SKILL_POINTS_LEVEL + stepify((stat_dict.get("intelligence") / 2), 1)
 
 func _init(char_name, stat_dictionary, skill_dictionary):
 	self.stat_dict = stat_dictionary
