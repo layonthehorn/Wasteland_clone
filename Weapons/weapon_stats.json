@@ -1,0 +1,21 @@
+
+{
+	"M16": {
+		"min_damage": 20,
+		"max_damage": 35,
+		"accuracy": 45,
+		"critical chance": 5,
+		"usage skill": "long guns",
+		"min skill": 2
+	
+},
+	
+	"M1911": {	
+		"min_damage": 10,
+		"max_damage": 20,
+		"accuracy": 50,
+		"critical chance": 10,
+		"usage skill": "hand guns",
+		"min skill": 1
+}
+}

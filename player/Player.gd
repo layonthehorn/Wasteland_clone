@@ -4,6 +4,7 @@ extends KinematicBody2D
 var velocity = Vector2.ZERO
 enum {
 	MOVE,
+	TEST
 	
 }
 var state = MOVE
@@ -14,12 +15,20 @@ const FRICTION = 500
 # tracking player movement
 # main loop
 func _physics_process(delta):
+	state_picker()
 	
 	# light state machine to switch states
 	match state:
 		MOVE:
 			move_state(delta)
+		TEST:
+			WeaponObject.new("M16")
 
+func state_picker():
+	if Input.is_action_just_pressed("test_script"):
+		state = TEST
+	else:
+		state = MOVE
 
 # Functions below here.
 

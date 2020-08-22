@@ -13,7 +13,7 @@
 position = Vector2( 160, 88 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
-remote_path = NodePath("../../../Camera2D")
+remote_path = NodePath("../../../PlayerCam")
 
 [node name="TileMaps" parent="YSort" instance=ExtResource( 4 )]
 
@@ -26,7 +26,7 @@ tile_data = PoolIntArray( -2, 5, 0, -1, 2, 0, -65536, 7, 0, 65534, 6, 0, 65535, 
 [node name="RuinedCityRoads" parent="YSort/TileMaps" index="2"]
 tile_data = PoolIntArray( 9, 3, 0, 196607, 1, 0, 131081, 2, 0, 262143, 36, 0, 196610, 17, 0, 196612, 25, 0, 393218, 17, 0, 393223, 16, 0, 524287, 2, 0, 589823, 31, 0, 524288, 11, 0 )
 
-[node name="TextureRect" type="TextureRect" parent="YSort"]
+[node name="BackgroundTexture" type="TextureRect" parent="YSort"]
 margin_left = -208.0
 margin_top = -168.0
 margin_right = 624.0
@@ -37,6 +37,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Camera2D" parent="." instance=ExtResource( 3 )]
+[node name="PlayerCam" parent="." instance=ExtResource( 3 )]
 
 [editable path="YSort/TileMaps"]
