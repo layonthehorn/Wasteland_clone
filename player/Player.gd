@@ -4,7 +4,8 @@ extends KinematicBody2D
 var velocity = Vector2.ZERO
 enum {
 	MOVE,
-	TEST
+	TEST,
+	FIGHT
 	
 }
 var state = MOVE
@@ -24,6 +25,8 @@ func _physics_process(delta):
 		TEST:
 			var current_weapon = WeaponObject.new("M16")
 			print(current_weapon.debug_stats())
+		FIGHT:
+			pass
 			
 
 func state_picker():

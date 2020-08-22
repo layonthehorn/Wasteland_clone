@@ -5,7 +5,7 @@
 		"max_damage": 35,
 		"accuracy": 45,
 		"critical chance": 5,
-		"usage skill": "long guns",
+		"usage skill": "automatic weapons",
 		"min skill": 2
 	
 },
@@ -15,7 +15,24 @@
 		"max_damage": 20,
 		"accuracy": 50,
 		"critical chance": 10,
-		"usage skill": "hand guns",
+		"usage skill": "small weapons",
 		"min skill": 1
-}
-}
+},
+
+	"Wooden Club": {	
+		"min_damage": 5,
+		"max_damage": 15,
+		"accuracy": 75,
+		"critical chance": 1,
+		"usage skill": "blunt weapons",
+		"min skill": 0
+},
+
+	"SOG Knife": {	
+		"min_damage": 15,
+		"max_damage": 25,
+		"accuracy": 55,
+		"critical chance": 20,
+		"usage skill": "bladed weapons",
+		"min skill": 3
+}}

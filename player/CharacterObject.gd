@@ -136,14 +136,17 @@ func level_up():
 	var count = level + 1
 	while (experience >= REQUIRED_EXP.get(count)):
 		# increases your skill points as needed
-		skill_points += calc_new_skill_points()
-		# updates your max health
-		update_max_health()
 		level += 1
 		count += 1
+		skill_points += calc_new_skill_points()
+	# updates your max health
+	update_max_health()
 
 func calc_new_skill_points():
-	return BASE_SKILL_POINTS_LEVEL + stepify((stat_dict.get("intelligence") / 2), 1)
+	if stat_dict.get("intelligence") > 1:
+		return BASE_SKILL_POINTS_LEVEL + stepify((stat_dict.get("intelligence") / 2), 1)
+	else:
+		return BASE_SKILL_POINTS_LEVEL
 
 func _init(char_name, stat_dictionary, skill_dictionary):
 	self.stat_dict = stat_dictionary
