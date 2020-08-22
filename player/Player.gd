@@ -22,7 +22,9 @@ func _physics_process(delta):
 		MOVE:
 			move_state(delta)
 		TEST:
-			WeaponObject.new("M16")
+			var current_weapon = WeaponObject.new("M16")
+			print(current_weapon.debug_stats())
+			
 
 func state_picker():
 	if Input.is_action_just_pressed("test_script"):
