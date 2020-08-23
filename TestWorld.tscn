@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://TileSets/backgrounds/greengrass.png" type="Texture" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://player/PlayerCam.tscn" type="PackedScene" id=3]
 [ext_resource path="res://TileSets/TileMaps.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Props/PropMaps.tscn" type="PackedScene" id=5]
 
 [node name="TestWorld" type="Node2D"]
 
@@ -26,6 +27,11 @@ tile_data = PoolIntArray( -2, 5, 0, -1, 2, 0, -65536, 7, 0, 65534, 6, 0, 65535, 
 [node name="RuinedCityRoads" parent="YSort/TileMaps" index="2"]
 tile_data = PoolIntArray( 9, 3, 0, 196607, 1, 0, 131081, 2, 0, 262143, 36, 0, 196610, 17, 0, 196612, 25, 0, 393218, 17, 0, 393223, 16, 0, 524287, 2, 0, 589823, 31, 0, 524288, 11, 0 )
 
+[node name="PropMaps" parent="YSort" instance=ExtResource( 5 )]
+
+[node name="Cars" parent="YSort/PropMaps" index="0"]
+tile_data = PoolIntArray( 65545, 0, 0, 196614, 7, 0, 327684, 14, 0, 524288, 17, 0 )
+
 [node name="BackgroundTexture" type="TextureRect" parent="YSort"]
 margin_left = -208.0
 margin_top = -168.0
@@ -40,3 +46,5 @@ __meta__ = {
 [node name="PlayerCam" parent="." instance=ExtResource( 3 )]
 
 [editable path="YSort/TileMaps"]
+
+[editable path="YSort/PropMaps"]

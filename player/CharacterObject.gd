@@ -10,15 +10,20 @@ const BASE_SKILL_POINTS = 0
 const BASE_SKILL_POINTS_LEVEL = 2
 # needed exp for each level
 const REQUIRED_EXP = {
-	2: 250,
-	3: 500,
-	4: 1000,
-	5: 2000,
+	2: 300,
+	3: 700,
+	4: 1200,
+	5: 1800,
 	6: 2500,
-	7: 3000,
-	8: 3500,
-	9: 4000,
-	10: 5000
+	7: 3400,
+	8: 4300,
+	9: 5400,
+	10: 6600,
+	11: 7900,
+	12: 9300,
+	13: 10800,
+	14: 12400,
+	15: 14100
 }
 
 enum COMBAT_STATE {

@@ -61,6 +61,8 @@ func name_get():
 func name_set(value):
 	name = value
 
+func get_damage():
+	return stepify(rand_range(min_damage, max_damage), 1)
 
 
 func _init(weap_name):
@@ -86,5 +88,4 @@ func _init(weap_name):
 			break
 	# asserts that a match is found for the weapon
 	assert(match_found == true)
-
 
