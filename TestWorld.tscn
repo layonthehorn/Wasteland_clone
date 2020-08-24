@@ -46,7 +46,6 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 152, 88 )
 current = true
-smoothing_enabled = true
 
 [node name="Control" parent="Camera2D" instance=ExtResource( 6 )]
 anchor_right = 0.0
