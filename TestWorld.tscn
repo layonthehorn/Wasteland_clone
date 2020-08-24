@@ -2,19 +2,19 @@
 
 [ext_resource path="res://TileSets/backgrounds/greengrass.png" type="Texture" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://player/PlayerCam.tscn" type="PackedScene" id=3]
 [ext_resource path="res://TileSets/TileMaps.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Props/PropMaps.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Menus/menubar.tscn" type="PackedScene" id=6]
 
 [node name="TestWorld" type="Node2D"]
 
 [node name="YSort" type="YSort" parent="."]
 
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
-position = Vector2( 160, 88 )
+position = Vector2( 152, 88 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="YSort/Player"]
-remote_path = NodePath("../../../PlayerCam")
+remote_path = NodePath("../../../Camera2D")
 
 [node name="TileMaps" parent="YSort" instance=ExtResource( 4 )]
 
@@ -43,7 +43,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PlayerCam" parent="." instance=ExtResource( 3 )]
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 152, 88 )
+current = true
+smoothing_enabled = true
+
+[node name="Control" parent="Camera2D" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -125.045
+margin_top = -56.0
+margin_right = -125.045
+margin_bottom = -56.0
 
 [editable path="YSort/TileMaps"]
 
