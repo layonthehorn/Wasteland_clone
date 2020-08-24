@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://theme.png" type="Texture" id=1]
 [ext_resource path="res://fonts/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Menus/menubar.gd" type="Script" id=3]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 2 )
 
 [node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
@@ -45,13 +47,13 @@ margin_right = 82.0
 margin_bottom = 24.0
 text = "Sqd"
 
-[node name="Button3" type="Button" parent="Control/NinePatchRect/HBoxContainer"]
+[node name="Nothing" type="Button" parent="Control/NinePatchRect/HBoxContainer"]
 margin_left = 86.0
 margin_right = 125.0
 margin_bottom = 24.0
 text = "---"
 
-[node name="Button4" type="Button" parent="Control/NinePatchRect/HBoxContainer"]
+[node name="Nothing2" type="Button" parent="Control/NinePatchRect/HBoxContainer"]
 margin_left = 129.0
 margin_right = 168.0
 margin_bottom = 24.0
@@ -68,3 +70,7 @@ margin_left = 224.0
 margin_right = 272.0
 margin_bottom = 24.0
 text = "Quit"
+[connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Inventory" to="." method="_on_Inventory_pressed"]
+[connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Squad" to="." method="_on_Squad_pressed"]
+[connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Save" to="." method="_on_Save_pressed"]
+[connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Quit" to="." method="_on_Quit_pressed"]
