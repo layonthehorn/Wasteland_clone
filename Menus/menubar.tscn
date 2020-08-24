@@ -47,13 +47,13 @@ margin_right = 82.0
 margin_bottom = 24.0
 text = "Sqd"
 
-[node name="Nothing" type="Button" parent="Control/NinePatchRect/HBoxContainer"]
+[node name="Testing Down" type="Button" parent="Control/NinePatchRect/HBoxContainer"]
 margin_left = 86.0
 margin_right = 125.0
 margin_bottom = 24.0
 text = "---"
 
-[node name="Nothing2" type="Button" parent="Control/NinePatchRect/HBoxContainer"]
+[node name="Testing Up" type="Button" parent="Control/NinePatchRect/HBoxContainer"]
 margin_left = 129.0
 margin_right = 168.0
 margin_bottom = 24.0
@@ -72,5 +72,7 @@ margin_bottom = 24.0
 text = "Quit"
 [connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Inventory" to="." method="_on_Inventory_pressed"]
 [connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Squad" to="." method="_on_Squad_pressed"]
+[connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Testing Down" to="." method="_on_Testing_Down_pressed"]
+[connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Testing Up" to="." method="_on_Testing_Up_pressed"]
 [connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="Control/NinePatchRect/HBoxContainer/Quit" to="." method="_on_Quit_pressed"]
