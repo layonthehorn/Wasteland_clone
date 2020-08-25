@@ -1,6 +1,6 @@
 class_name CharacterObject
 
-const BASE_HEALTH = 20
+const BASE_HEALTH = 15
 const BASE_CRIT = 5
 const BASE_LEVEL = 1
 const BASE_BLEEDING_DAMAGE = 20
@@ -39,6 +39,7 @@ var crit_chance = BASE_CRIT setget crit_chance_set, crit_chance_get
 var max_health = null setget max_health_set, max_health_get
 var experience = BASE_EXP setget experience_set, experience_get
 var skill_points = BASE_SKILL_POINTS setget skill_points_set, skill_points_get
+var race = null setget race_set, race_get
 
 # we import the full stat dict when instansting the class
 #{
@@ -63,6 +64,12 @@ var stat_dict = null
 var skill_dict = null
 # character state
 var character_state = COMBAT_STATE.ALIVE
+
+func race_get():
+	return race
+	
+func race_set(value):
+	race = value
 
 func skill_points_get():
 	return skill_points
@@ -96,7 +103,7 @@ func max_health_set(value):
 	max_health = value
 
 func update_max_health():
-	max_health = (BASE_HEALTH + level) * stat_dict.get("strength")
+	max_health = BASE_HEALTH + (stat_dict.get("strength") * 2 * level)
 	
 func level_get():
 	return level
@@ -129,9 +136,9 @@ func is_combat_effective():
 # heals you while camping.
 func camping_healing():
 	if health < max_health:
-		# prevents healing over max health
 		heal_player(BASE_HEALING)
 
+# prevents healing over max health
 func heal_player(heal_value):
 	health = clamp(heal_value, health, max_health)
 
@@ -153,7 +160,10 @@ func calc_new_skill_points():
 	else:
 		return BASE_SKILL_POINTS_LEVEL
 
-func _init(char_name, stat_dictionary, skill_dictionary):
+func _init(char_name, char_race, stat_dictionary = null, skill_dictionary = null):
+	
+	self.race = char_race
 	self.stat_dict = stat_dictionary
 	self.skill_dict = skill_dictionary
 	self.name = char_name
+	update_max_health()

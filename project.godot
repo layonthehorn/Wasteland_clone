@@ -10,11 +10,6 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
-"class": "CharCreation",
-"language": "GDScript",
-"path": "res://Classes/Char_Creation_Class.gd"
-}, {
-"base": "Reference",
 "class": "CharacterObject",
 "language": "GDScript",
 "path": "res://player/CharacterObject.gd"
@@ -25,7 +20,6 @@ _global_script_classes=[ {
 "path": "res://Weapons/WeaponObject.gd"
 } ]
 _global_script_class_icons={
-"CharCreation": "",
 "CharacterObject": "",
 "WeaponObject": ""
 }
@@ -36,6 +30,10 @@ config/name="Wasteland_clone"
 run/main_scene="res://TestWorld.tscn"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"
+
+[autoload]
+
+SquadSingleton="*res://Classes/SquadSingleton.gd"
 
 [display]
 
