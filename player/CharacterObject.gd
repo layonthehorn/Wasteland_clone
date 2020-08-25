@@ -34,12 +34,14 @@ enum COMBAT_STATE {
 
 var name = null setget name_set, name_get
 var health = null setget health_set, health_get
-var level = BASE_LEVEL setget level_set, level_get
-var crit_chance = BASE_CRIT setget crit_chance_set, crit_chance_get
+var level:= BASE_LEVEL setget level_set, level_get
+var crit_chance:= BASE_CRIT setget crit_chance_set, crit_chance_get
 var max_health = null setget max_health_set, max_health_get
-var experience = BASE_EXP setget experience_set, experience_get
-var skill_points = BASE_SKILL_POINTS setget skill_points_set, skill_points_get
+var experience:= BASE_EXP setget experience_set, experience_get
+var skill_points:= BASE_SKILL_POINTS setget skill_points_set, skill_points_get
 var race = null setget race_set, race_get
+var primary:= ""
+var secondary:= ""
 
 # we import the full stat dict when instansting the class
 #{
