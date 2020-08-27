@@ -32,16 +32,19 @@ enum COMBAT_STATE {
 	DEAD
 }
 
-var name = null setget name_set, name_get
-var health = null setget health_set, health_get
+var f_name:= "" setget f_name_set, f_name_get
+var l_name:= "" setget l_name_set, f_name_get
+var health:= 0 setget health_set, health_get
 var level:= BASE_LEVEL setget level_set, level_get
 var crit_chance:= BASE_CRIT setget crit_chance_set, crit_chance_get
-var max_health = null setget max_health_set, max_health_get
+var max_health:= 0 setget max_health_set, max_health_get
 var experience:= BASE_EXP setget experience_set, experience_get
 var skill_points:= BASE_SKILL_POINTS setget skill_points_set, skill_points_get
-var race = null setget race_set, race_get
-var primary:= ""
-var secondary:= ""
+var race:= "" setget race_set, race_get
+var bio:= "" setget bio_set, bio_get
+var gender:= "" setget gender_set, gender_get
+var primary:= "" setget primary_set, primary_get
+var secondary:= "" setget secondary_set, secondary_get
 
 # we import the full stat dict when instansting the class
 #{
@@ -67,6 +70,36 @@ var skill_dict = null
 # character state
 var character_state = COMBAT_STATE.ALIVE
 
+func secondary_get():
+	return secondary
+
+func secondary_set(sec):
+	secondary = sec
+
+func primary_get():
+	return primary
+
+func primary_set(prim):
+	primary = prim
+
+func gender_get():
+	return gender
+
+func gender_set(gend):
+	gender = gend
+
+func bio_set(bio_value):
+	bio = bio_value
+
+func bio_get():
+	return bio
+
+func l_name_get():
+	return l_name
+
+func l_name_set(name):
+	l_name = name
+
 func race_get():
 	return race
 	
@@ -85,11 +118,11 @@ func experience_get():
 func experience_set(value):
 	experience = value
 
-func name_get():
-	return name
+func f_name_get():
+	return f_name
 	
-func name_set(value):
-	name = value
+func f_name_set(value):
+	f_name = value
 
 # health functions
 func health_get():
@@ -127,7 +160,7 @@ func is_combat_effective():
 		character_state = COMBAT_STATE.ALIVE
 	# if character is below or equal to 0 health,
 	# they are bleeding out and unable to fight
-	elif -600 < health <= 0:
+	elif -600 < health and health <= 0:
 		character_state = COMBAT_STATE.DYING
 		health = health - BASE_BLEEDING_DAMAGE
 	# if character is below -600 health,

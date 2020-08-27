@@ -18,10 +18,16 @@ _global_script_classes=[ {
 "class": "WeaponObject",
 "language": "GDScript",
 "path": "res://Weapons/WeaponObject.gd"
+}, {
+"base": "Reference",
+"class": "enemy",
+"language": "GDScript",
+"path": "res://Classes/Enemy.gd"
 } ]
 _global_script_class_icons={
 "CharacterObject": "",
-"WeaponObject": ""
+"WeaponObject": "",
+"enemy": ""
 }
 
 [application]
