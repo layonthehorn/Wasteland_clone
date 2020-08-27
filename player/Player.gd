@@ -29,6 +29,11 @@ func _physics_process(delta):
 			pass
 			
 
+func _ready():
+	EventsSingleton.connect("button_prompt", self, "update_label")
+	EventsSingleton.connect("button_prompt_over", self, "reset_label")
+	
+
 func state_picker():
 	if Input.is_action_just_pressed("test_script"):
 		state = TEST
@@ -60,3 +65,13 @@ func get_input():
 	# normalizing them together to prevent faster diaganal moving
 	input_vector = input_vector.normalized()
 	return input_vector
+	
+func update_label(label_contents):
+	var label = $Label
+	label.visible = true
+	label.set_text(label_contents)
+
+func reset_label():
+	var label = $Label
+	label.visible = false
+	label.set_text("")

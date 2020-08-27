@@ -2,13 +2,12 @@
 
 [ext_resource path="res://TileSets/backgrounds/greengrass.png" type="Texture" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scripts/GUI_Scripts.gd" type="Script" id=3]
+[ext_resource path="res://Interactive_Objects/Prompts/ButtonPress.tscn" type="PackedScene" id=3]
 [ext_resource path="res://TileSets/TileMaps.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Props/PropMaps.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Menus/menubar.tscn" type="PackedScene" id=6]
 
 [node name="TestWorld" type="Node2D"]
-script = ExtResource( 3 )
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -53,6 +52,12 @@ smoothing_enabled = true
 smoothing_speed = 10.0
 
 [node name="Control" parent="Camera2D" instance=ExtResource( 6 )]
+
+[node name="E_Prompt" parent="." instance=ExtResource( 3 )]
+position = Vector2( -15.8919, 38.4055 )
+
+[node name="E_Prompt2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 304.546, 23.2333 )
 
 [editable path="YSort/TileMaps"]
 

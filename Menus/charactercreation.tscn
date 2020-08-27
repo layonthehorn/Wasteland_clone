@@ -1,0 +1,874 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_right = 399.0
+margin_bottom = 258.0
+tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Character Info" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Character Info"]
+margin_left = 19.0
+margin_right = 142.0
+margin_bottom = 214.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Character Info/VBoxContainer"]
+margin_right = 123.0
+margin_bottom = 14.0
+text = "First Name"
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Character Info/VBoxContainer"]
+margin_top = 18.0
+margin_right = 123.0
+margin_bottom = 42.0
+
+[node name="Label2" type="Label" parent="TabContainer/Character Info/VBoxContainer"]
+margin_top = 46.0
+margin_right = 123.0
+margin_bottom = 60.0
+text = "Last Name"
+
+[node name="LineEdit2" type="LineEdit" parent="TabContainer/Character Info/VBoxContainer"]
+margin_top = 64.0
+margin_right = 123.0
+margin_bottom = 88.0
+
+[node name="Label3" type="Label" parent="TabContainer/Character Info/VBoxContainer"]
+margin_top = 92.0
+margin_right = 123.0
+margin_bottom = 106.0
+text = "Race"
+
+[node name="OptionButton" type="OptionButton" parent="TabContainer/Character Info/VBoxContainer"]
+margin_top = 110.0
+margin_right = 123.0
+margin_bottom = 130.0
+
+[node name="Label4" type="Label" parent="TabContainer/Character Info/VBoxContainer"]
+margin_top = 134.0
+margin_right = 123.0
+margin_bottom = 148.0
+text = "Gender"
+
+[node name="OptionButton2" type="OptionButton" parent="TabContainer/Character Info/VBoxContainer"]
+margin_top = 152.0
+margin_right = 123.0
+margin_bottom = 172.0
+
+[node name="Label5" type="Label" parent="TabContainer/Character Info/VBoxContainer"]
+margin_top = 176.0
+margin_right = 123.0
+margin_bottom = 190.0
+text = "Age"
+
+[node name="OptionButton3" type="OptionButton" parent="TabContainer/Character Info/VBoxContainer"]
+margin_top = 194.0
+margin_right = 123.0
+margin_bottom = 214.0
+
+[node name="Label" type="Label" parent="TabContainer/Character Info"]
+margin_left = 190.652
+margin_right = 253.652
+margin_bottom = 14.0
+text = "Biography"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="TabContainer/Character Info"]
+margin_left = 192.0
+margin_top = 26.0
+margin_right = 368.0
+margin_bottom = 201.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Attributes" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Attributes"]
+margin_left = 49.2555
+margin_top = -0.681732
+margin_right = 211.256
+margin_bottom = 247.318
+grow_horizontal = 0
+grow_vertical = 0
+rect_scale = Vector2( 1, 0.875 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Attributes/VBoxContainer"]
+margin_right = 162.0
+margin_bottom = 14.0
+text = "Strength"
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 18.0
+margin_right = 162.0
+margin_bottom = 32.0
+
+[node name="Label2" type="Label" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 36.0
+margin_right = 162.0
+margin_bottom = 50.0
+text = "Intelligence"
+
+[node name="ProgressBar2" type="ProgressBar" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 54.0
+margin_right = 162.0
+margin_bottom = 68.0
+
+[node name="Label3" type="Label" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 72.0
+margin_right = 162.0
+margin_bottom = 86.0
+text = "Luck"
+
+[node name="ProgressBar3" type="ProgressBar" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 90.0
+margin_right = 162.0
+margin_bottom = 104.0
+
+[node name="Label4" type="Label" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 108.0
+margin_right = 162.0
+margin_bottom = 122.0
+text = "Speed"
+
+[node name="ProgressBar4" type="ProgressBar" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 126.0
+margin_right = 162.0
+margin_bottom = 140.0
+
+[node name="Label5" type="Label" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 144.0
+margin_right = 162.0
+margin_bottom = 158.0
+text = "Agility"
+
+[node name="ProgressBar5" type="ProgressBar" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 162.0
+margin_right = 162.0
+margin_bottom = 176.0
+
+[node name="Label6" type="Label" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 180.0
+margin_right = 162.0
+margin_bottom = 194.0
+text = "Dexterity"
+
+[node name="ProgressBar6" type="ProgressBar" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 198.0
+margin_right = 162.0
+margin_bottom = 212.0
+
+[node name="Label7" type="Label" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 216.0
+margin_right = 162.0
+margin_bottom = 230.0
+text = "Charisma"
+
+[node name="ProgressBar7" type="ProgressBar" parent="TabContainer/Attributes/VBoxContainer"]
+margin_top = 234.0
+margin_right = 162.0
+margin_bottom = 248.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/Attributes"]
+margin_left = 1.7818
+margin_top = 3.5636
+margin_right = 41.7818
+margin_bottom = 169.564
+rect_scale = Vector2( 0.995, 1.309 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/Attributes/VBoxContainer2"]
+margin_right = 40.0
+margin_bottom = 20.0
+text = "-"
+
+[node name="Button2" type="Button" parent="TabContainer/Attributes/VBoxContainer2"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 44.0
+text = "-"
+
+[node name="Button3" type="Button" parent="TabContainer/Attributes/VBoxContainer2"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 68.0
+text = "-"
+
+[node name="Button4" type="Button" parent="TabContainer/Attributes/VBoxContainer2"]
+margin_top = 72.0
+margin_right = 40.0
+margin_bottom = 92.0
+text = "-"
+
+[node name="Button5" type="Button" parent="TabContainer/Attributes/VBoxContainer2"]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 116.0
+text = "-"
+
+[node name="Button6" type="Button" parent="TabContainer/Attributes/VBoxContainer2"]
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 140.0
+text = "-"
+
+[node name="Button7" type="Button" parent="TabContainer/Attributes/VBoxContainer2"]
+margin_top = 144.0
+margin_right = 40.0
+margin_bottom = 164.0
+text = "-"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="TabContainer/Attributes"]
+margin_left = 220.646
+margin_top = 5.7818
+margin_right = 260.646
+margin_bottom = 171.782
+rect_scale = Vector2( 0.998, 1.293 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/Attributes/VBoxContainer3"]
+margin_right = 40.0
+margin_bottom = 20.0
+text = "+"
+
+[node name="Button2" type="Button" parent="TabContainer/Attributes/VBoxContainer3"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 44.0
+text = "+"
+
+[node name="Button3" type="Button" parent="TabContainer/Attributes/VBoxContainer3"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 68.0
+text = "+"
+
+[node name="Button4" type="Button" parent="TabContainer/Attributes/VBoxContainer3"]
+margin_top = 72.0
+margin_right = 40.0
+margin_bottom = 92.0
+text = "+"
+
+[node name="Button5" type="Button" parent="TabContainer/Attributes/VBoxContainer3"]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 116.0
+text = "+"
+
+[node name="Button6" type="Button" parent="TabContainer/Attributes/VBoxContainer3"]
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 140.0
+text = "+"
+
+[node name="Button7" type="Button" parent="TabContainer/Attributes/VBoxContainer3"]
+margin_top = 144.0
+margin_right = 40.0
+margin_bottom = 164.0
+text = "+"
+
+[node name="Skills" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Skills"]
+margin_left = 26.2815
+margin_top = -0.44545
+margin_right = 155.282
+margin_bottom = 247.555
+rect_scale = Vector2( 0.585, 0.879 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Skills/VBoxContainer"]
+margin_right = 129.0
+margin_bottom = 14.0
+text = "Automatic Weapons"
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 18.0
+margin_right = 129.0
+margin_bottom = 32.0
+
+[node name="Label2" type="Label" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 36.0
+margin_right = 129.0
+margin_bottom = 50.0
+text = "Explosive Weapons"
+
+[node name="ProgressBar2" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 54.0
+margin_right = 129.0
+margin_bottom = 68.0
+
+[node name="Label3" type="Label" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 72.0
+margin_right = 129.0
+margin_bottom = 86.0
+text = "Energy Weapons"
+
+[node name="ProgressBar3" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 90.0
+margin_right = 129.0
+margin_bottom = 104.0
+
+[node name="Label4" type="Label" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 108.0
+margin_right = 129.0
+margin_bottom = 122.0
+text = "Long Weapons"
+
+[node name="ProgressBar4" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 126.0
+margin_right = 129.0
+margin_bottom = 140.0
+
+[node name="Label5" type="Label" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 144.0
+margin_right = 129.0
+margin_bottom = 158.0
+text = "Small Weapons"
+
+[node name="ProgressBar5" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 162.0
+margin_right = 129.0
+margin_bottom = 176.0
+
+[node name="Label6" type="Label" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 180.0
+margin_right = 129.0
+margin_bottom = 194.0
+text = "Bladed Weapons"
+
+[node name="ProgressBar6" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 198.0
+margin_right = 129.0
+margin_bottom = 212.0
+
+[node name="Label7" type="Label" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 216.0
+margin_right = 129.0
+margin_bottom = 230.0
+text = "Blunt Weapons"
+
+[node name="ProgressBar7" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer"]
+margin_top = 234.0
+margin_right = 129.0
+margin_bottom = 248.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TabContainer/Skills"]
+margin_left = 153.235
+margin_top = 4.4545
+margin_right = 270.235
+margin_bottom = 252.454
+rect_scale = Vector2( 0.641, 0.859 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Skills/VBoxContainer2"]
+margin_right = 117.0
+margin_bottom = 14.0
+text = "Brawling Weapons"
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 18.0
+margin_right = 117.0
+margin_bottom = 32.0
+
+[node name="Label2" type="Label" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 36.0
+margin_right = 117.0
+margin_bottom = 50.0
+text = "Medic"
+
+[node name="ProgressBar2" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 54.0
+margin_right = 117.0
+margin_bottom = 68.0
+
+[node name="Label3" type="Label" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 72.0
+margin_right = 117.0
+margin_bottom = 86.0
+text = "Doctor"
+
+[node name="ProgressBar3" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 90.0
+margin_right = 117.0
+margin_bottom = 104.0
+
+[node name="Label4" type="Label" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 108.0
+margin_right = 117.0
+margin_bottom = 122.0
+text = "Perception"
+
+[node name="ProgressBar4" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 126.0
+margin_right = 117.0
+margin_bottom = 140.0
+
+[node name="Label5" type="Label" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 144.0
+margin_right = 117.0
+margin_bottom = 158.0
+text = "Lock Picking"
+
+[node name="ProgressBar5" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 162.0
+margin_right = 117.0
+margin_bottom = 176.0
+
+[node name="Label6" type="Label" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 180.0
+margin_right = 117.0
+margin_bottom = 194.0
+text = "Bomb Disarming"
+
+[node name="ProgressBar6" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 198.0
+margin_right = 117.0
+margin_bottom = 212.0
+
+[node name="Label7" type="Label" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 216.0
+margin_right = 117.0
+margin_bottom = 230.0
+text = "Safe Cracking"
+
+[node name="ProgressBar7" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer2"]
+margin_top = 234.0
+margin_right = 117.0
+margin_bottom = 248.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="TabContainer/Skills"]
+margin_left = 279.297
+margin_top = 5.34538
+margin_right = 395.297
+margin_bottom = 253.345
+rect_scale = Vector2( 0.634, 0.853 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TabContainer/Skills/VBoxContainer3"]
+margin_right = 116.0
+margin_bottom = 14.0
+text = "Electronics"
+
+[node name="ProgressBar" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 18.0
+margin_right = 116.0
+margin_bottom = 32.0
+
+[node name="Label2" type="Label" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 36.0
+margin_right = 116.0
+margin_bottom = 50.0
+text = "Mechanical Repair"
+
+[node name="ProgressBar2" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 54.0
+margin_right = 116.0
+margin_bottom = 68.0
+
+[node name="Label3" type="Label" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 72.0
+margin_right = 116.0
+margin_bottom = 86.0
+text = "Confidence"
+
+[node name="ProgressBar3" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 90.0
+margin_right = 116.0
+margin_bottom = 104.0
+
+[node name="Label4" type="Label" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 108.0
+margin_right = 116.0
+margin_bottom = 122.0
+text = "Intimidation"
+
+[node name="ProgressBar4" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 126.0
+margin_right = 116.0
+margin_bottom = 140.0
+
+[node name="Label5" type="Label" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 144.0
+margin_right = 116.0
+margin_bottom = 158.0
+text = "Alarm Disarming"
+
+[node name="ProgressBar5" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 162.0
+margin_right = 116.0
+margin_bottom = 176.0
+
+[node name="Label6" type="Label" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 180.0
+margin_right = 116.0
+margin_bottom = 194.0
+text = "Combat Control"
+
+[node name="ProgressBar6" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 198.0
+margin_right = 116.0
+margin_bottom = 212.0
+
+[node name="Label7" type="Label" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 216.0
+margin_right = 116.0
+margin_bottom = 230.0
+text = "Leadership"
+
+[node name="ProgressBar7" type="ProgressBar" parent="TabContainer/Skills/VBoxContainer3"]
+margin_top = 234.0
+margin_right = 116.0
+margin_bottom = 248.0
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="TabContainer/Skills"]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 0.432, 1.342 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/Skills/VBoxContainer4"]
+margin_right = 40.0
+margin_bottom = 20.0
+text = "-"
+
+[node name="Button2" type="Button" parent="TabContainer/Skills/VBoxContainer4"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 44.0
+text = "-"
+
+[node name="Button3" type="Button" parent="TabContainer/Skills/VBoxContainer4"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 68.0
+text = "-"
+
+[node name="Button4" type="Button" parent="TabContainer/Skills/VBoxContainer4"]
+margin_top = 72.0
+margin_right = 40.0
+margin_bottom = 92.0
+text = "-"
+
+[node name="Button5" type="Button" parent="TabContainer/Skills/VBoxContainer4"]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 116.0
+text = "-"
+
+[node name="Button6" type="Button" parent="TabContainer/Skills/VBoxContainer4"]
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 140.0
+text = "-"
+
+[node name="Button7" type="Button" parent="TabContainer/Skills/VBoxContainer4"]
+margin_top = 144.0
+margin_right = 40.0
+margin_bottom = 164.0
+text = "-"
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="TabContainer/Skills"]
+margin_left = 105.572
+margin_top = -0.445463
+margin_right = 145.572
+margin_bottom = 163.555
+rect_scale = Vector2( 0.479, 1.344 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/Skills/VBoxContainer5"]
+margin_right = 40.0
+margin_bottom = 20.0
+text = "+"
+
+[node name="Button2" type="Button" parent="TabContainer/Skills/VBoxContainer5"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 44.0
+text = "+"
+
+[node name="Button3" type="Button" parent="TabContainer/Skills/VBoxContainer5"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 68.0
+text = "+"
+
+[node name="Button4" type="Button" parent="TabContainer/Skills/VBoxContainer5"]
+margin_top = 72.0
+margin_right = 40.0
+margin_bottom = 92.0
+text = "+"
+
+[node name="Button5" type="Button" parent="TabContainer/Skills/VBoxContainer5"]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 116.0
+text = "+"
+
+[node name="Button6" type="Button" parent="TabContainer/Skills/VBoxContainer5"]
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 140.0
+text = "+"
+
+[node name="Button7" type="Button" parent="TabContainer/Skills/VBoxContainer5"]
+margin_top = 144.0
+margin_right = 40.0
+margin_bottom = 164.0
+text = "+"
+
+[node name="VBoxContainer6" type="VBoxContainer" parent="TabContainer/Skills"]
+margin_left = 129.626
+margin_top = 0.44545
+margin_right = 169.626
+margin_bottom = 164.445
+rect_scale = Vector2( 0.503, 1.338 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/Skills/VBoxContainer6"]
+margin_right = 40.0
+margin_bottom = 20.0
+text = "-"
+
+[node name="Button2" type="Button" parent="TabContainer/Skills/VBoxContainer6"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 44.0
+text = "-"
+
+[node name="Button3" type="Button" parent="TabContainer/Skills/VBoxContainer6"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 68.0
+text = "-"
+
+[node name="Button4" type="Button" parent="TabContainer/Skills/VBoxContainer6"]
+margin_top = 72.0
+margin_right = 40.0
+margin_bottom = 92.0
+text = "-"
+
+[node name="Button5" type="Button" parent="TabContainer/Skills/VBoxContainer6"]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 116.0
+text = "-"
+
+[node name="Button6" type="Button" parent="TabContainer/Skills/VBoxContainer6"]
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 140.0
+text = "-"
+
+[node name="Button7" type="Button" parent="TabContainer/Skills/VBoxContainer6"]
+margin_top = 144.0
+margin_right = 40.0
+margin_bottom = 164.0
+text = "-"
+
+[node name="VBoxContainer7" type="VBoxContainer" parent="TabContainer/Skills"]
+margin_left = 230.297
+margin_top = 2.22725
+margin_right = 270.297
+margin_bottom = 166.227
+rect_scale = Vector2( 0.537, 1.336 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/Skills/VBoxContainer7"]
+margin_right = 40.0
+margin_bottom = 20.0
+text = "+"
+
+[node name="Button2" type="Button" parent="TabContainer/Skills/VBoxContainer7"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 44.0
+text = "+"
+
+[node name="Button3" type="Button" parent="TabContainer/Skills/VBoxContainer7"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 68.0
+text = "+"
+
+[node name="Button4" type="Button" parent="TabContainer/Skills/VBoxContainer7"]
+margin_top = 72.0
+margin_right = 40.0
+margin_bottom = 92.0
+text = "+"
+
+[node name="Button5" type="Button" parent="TabContainer/Skills/VBoxContainer7"]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 116.0
+text = "+"
+
+[node name="Button6" type="Button" parent="TabContainer/Skills/VBoxContainer7"]
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 140.0
+text = "+"
+
+[node name="Button7" type="Button" parent="TabContainer/Skills/VBoxContainer7"]
+margin_top = 144.0
+margin_right = 40.0
+margin_bottom = 164.0
+text = "+"
+
+[node name="VBoxContainer8" type="VBoxContainer" parent="TabContainer/Skills"]
+margin_left = 255.688
+margin_top = 0.8909
+margin_right = 295.688
+margin_bottom = 164.891
+rect_scale = Vector2( 0.522, 1.335 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/Skills/VBoxContainer8"]
+margin_right = 40.0
+margin_bottom = 20.0
+text = "-"
+
+[node name="Button2" type="Button" parent="TabContainer/Skills/VBoxContainer8"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 44.0
+text = "-"
+
+[node name="Button3" type="Button" parent="TabContainer/Skills/VBoxContainer8"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 68.0
+text = "-"
+
+[node name="Button4" type="Button" parent="TabContainer/Skills/VBoxContainer8"]
+margin_top = 72.0
+margin_right = 40.0
+margin_bottom = 92.0
+text = "-"
+
+[node name="Button5" type="Button" parent="TabContainer/Skills/VBoxContainer8"]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 116.0
+text = "-"
+
+[node name="Button6" type="Button" parent="TabContainer/Skills/VBoxContainer8"]
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 140.0
+text = "-"
+
+[node name="Button7" type="Button" parent="TabContainer/Skills/VBoxContainer8"]
+margin_top = 144.0
+margin_right = 40.0
+margin_bottom = 164.0
+text = "-"
+
+[node name="VBoxContainer9" type="VBoxContainer" parent="TabContainer/Skills"]
+margin_left = 361.334
+margin_top = -3.36359
+margin_right = 401.334
+margin_bottom = 160.636
+rect_scale = Vector2( 0.583, 1.365 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="TabContainer/Skills/VBoxContainer9"]
+margin_right = 40.0
+margin_bottom = 20.0
+text = "+"
+
+[node name="Button2" type="Button" parent="TabContainer/Skills/VBoxContainer9"]
+margin_top = 24.0
+margin_right = 40.0
+margin_bottom = 44.0
+text = "+"
+
+[node name="Button3" type="Button" parent="TabContainer/Skills/VBoxContainer9"]
+margin_top = 48.0
+margin_right = 40.0
+margin_bottom = 68.0
+text = "+"
+
+[node name="Button4" type="Button" parent="TabContainer/Skills/VBoxContainer9"]
+margin_top = 72.0
+margin_right = 40.0
+margin_bottom = 92.0
+text = "+"
+
+[node name="Button5" type="Button" parent="TabContainer/Skills/VBoxContainer9"]
+margin_top = 96.0
+margin_right = 40.0
+margin_bottom = 116.0
+text = "+"
+
+[node name="Button6" type="Button" parent="TabContainer/Skills/VBoxContainer9"]
+margin_top = 120.0
+margin_right = 40.0
+margin_bottom = 140.0
+text = "+"
+
+[node name="Button7" type="Button" parent="TabContainer/Skills/VBoxContainer9"]
+margin_top = 144.0
+margin_right = 40.0
+margin_bottom = 164.0
+text = "+"
