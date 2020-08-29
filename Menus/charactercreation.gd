@@ -215,9 +215,8 @@ func update_skill_display():
 
 func increase_skill(skill):
 	var current_skill_level = skill_dict[skill]
-	print(SKILL_COST_DICT[current_skill_level + 1])
-	if total_skill_points >= SKILL_COST_DICT[current_skill_level + 1]:
-		if current_skill_level < 10:
+	if current_skill_level < 10:
+		if total_skill_points >= SKILL_COST_DICT[current_skill_level + 1]:
 			total_skill_points -= SKILL_COST_DICT[current_skill_level + 1]
 			skill_dict[skill] += 1
 			update_skill_bar_fill(skill)
@@ -231,8 +230,131 @@ func decrease_skill(skill):
 		update_skill_bar_fill(skill)
 		update_skill_display()
 
+# row one buttons
 func _on_autowepup_pressed():
 	increase_skill("automatic weapons")
 
 func _on_autowepdown_pressed():
 	decrease_skill("automatic weapons")
+
+func _on_explodwepup_pressed():
+	pass # Replace with function body.
+
+func _on_explodwepdown_pressed():
+	pass # Replace with function body.
+
+func _on_energwepup_pressed():
+	pass # Replace with function body.
+
+func _on_energwepdown_pressed():
+	pass # Replace with function body.
+
+func _on_longwepup_pressed():
+	pass # Replace with function body.
+
+func _on_longwepdown_pressed():
+	pass # Replace with function body.
+
+func _on_smallwepup_pressed():
+	pass # Replace with function body.
+
+func _on_smallwepdown_pressed():
+	pass # Replace with function body.
+
+func _on_bladwepup_pressed():
+	pass # Replace with function body.
+
+func _on_bladewepdown_pressed():
+	pass # Replace with function body.
+
+func _on_blunwepup_pressed():
+	pass # Replace with function body.
+
+func _on_blunwepdown_pressed():
+	pass # Replace with function body.
+
+# row two buttons
+func _on_brawlwepup_pressed():
+	pass # Replace with function body.
+
+func _on_brawlwepdown_pressed():
+	pass # Replace with function body.
+
+func _on_medicup_pressed():
+	pass # Replace with function body.
+
+func _on_medicdown_pressed():
+	pass # Replace with function body.
+
+func _on_doctorup_pressed():
+	pass # Replace with function body.
+
+func _on_doctordown_pressed():
+	pass # Replace with function body.
+
+func _on_perceptup_pressed():
+	pass # Replace with function body.
+
+func _on_perceptdown_pressed():
+	pass # Replace with function body.
+
+func _on_lockpickup_pressed():
+	pass # Replace with function body.
+
+func _on_lockpickdown_pressed():
+	pass # Replace with function body.
+
+func _on_bombdisup_pressed():
+	pass # Replace with function body.
+
+func _on_bombdisdown_pressed():
+	pass # Replace with function body.
+
+func _on_safecrackup_pressed():
+	pass # Replace with function body.
+
+func _on_safecrackdown_pressed():
+	pass # Replace with function body.
+
+# row three Buttons
+func _on_elecup_pressed():
+	pass # Replace with function body.
+
+func _on_elecdown_pressed():
+	pass # Replace with function body.
+
+func _on_mechup_pressed():
+	pass # Replace with function body.
+
+func _on_mechdown_pressed():
+	pass # Replace with function body.
+
+func _on_confup_pressed():
+	pass # Replace with function body.
+
+func _on_confdown_pressed():
+	pass # Replace with function body.
+
+func _on_intimidateup_pressed():
+	pass # Replace with function body.
+
+func _on_intimidatedown_pressed():
+	pass # Replace with function body.
+
+func _on_alarmdisup_pressed():
+	pass # Replace with function body.
+
+func _on_alarmdisdown_pressed():
+	pass # Replace with function body.
+
+func _on_combatcontup_pressed():
+	pass # Replace with function body.
+
+func _on_combatcontdown_pressed():
+	pass # Replace with function body.
+
+func _on_leaderup_pressed():
+	pass # Replace with function body.
+
+func _on_leaderdown_pressed():
+	pass # Replace with function body.
