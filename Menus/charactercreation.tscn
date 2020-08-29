@@ -107,28 +107,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="next" type="Button" parent="TabContainer/Info"]
-visible = false
-margin_left = 332.575
-margin_top = 203.918
-margin_right = 374.575
-margin_bottom = 223.918
-text = "Next"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="back" type="Button" parent="TabContainer/Info"]
-visible = false
-margin_left = 281.701
-margin_top = 203.918
-margin_right = 323.701
-margin_bottom = 223.918
-text = "Back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Attributes" type="Tabs" parent="TabContainer"]
 visible = false
 anchor_right = 1.0
@@ -365,28 +343,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="next" type="Button" parent="TabContainer/Attributes"]
-visible = false
-margin_left = 334.677
-margin_top = 192.986
-margin_right = 376.677
-margin_bottom = 212.986
-text = "Next"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="back" type="Button" parent="TabContainer/Attributes"]
-visible = false
-margin_left = 270.769
-margin_top = 192.566
-margin_right = 312.769
-margin_bottom = 212.566
-text = "Back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Skills" type="Tabs" parent="TabContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -441,62 +397,63 @@ text = "Energy Weapons"
 [node name="energwepbar" type="ProgressBar" parent="TabContainer/Skills/skillbars1"]
 margin_top = 90.0
 margin_right = 129.0
-margin_bottom = 92.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 129, 14 )
 max_value = 10.0
 percent_visible = false
 
 [node name="longwep" type="Label" parent="TabContainer/Skills/skillbars1"]
-margin_top = 96.0
+margin_top = 108.0
 margin_right = 129.0
-margin_bottom = 110.0
+margin_bottom = 122.0
 text = "Long Weapons"
 
 [node name="longwepbar" type="ProgressBar" parent="TabContainer/Skills/skillbars1"]
-margin_top = 114.0
+margin_top = 126.0
 margin_right = 129.0
-margin_bottom = 128.0
+margin_bottom = 140.0
 rect_min_size = Vector2( 129, 14 )
 max_value = 10.0
 percent_visible = false
 
 [node name="smallwep" type="Label" parent="TabContainer/Skills/skillbars1"]
-margin_top = 132.0
+margin_top = 144.0
 margin_right = 129.0
-margin_bottom = 146.0
+margin_bottom = 158.0
 text = "Small Weapons"
 
 [node name="smallwepbar" type="ProgressBar" parent="TabContainer/Skills/skillbars1"]
-margin_top = 150.0
+margin_top = 162.0
 margin_right = 129.0
-margin_bottom = 164.0
+margin_bottom = 176.0
 rect_min_size = Vector2( 129, 14 )
 max_value = 10.0
 percent_visible = false
 
 [node name="bladwep" type="Label" parent="TabContainer/Skills/skillbars1"]
-margin_top = 168.0
+margin_top = 180.0
 margin_right = 129.0
-margin_bottom = 182.0
+margin_bottom = 194.0
 text = "Bladed Weapons"
 
 [node name="bladwepbar" type="ProgressBar" parent="TabContainer/Skills/skillbars1"]
-margin_top = 186.0
+margin_top = 198.0
 margin_right = 129.0
-margin_bottom = 200.0
+margin_bottom = 212.0
 rect_min_size = Vector2( 129, 14 )
 max_value = 10.0
 percent_visible = false
 
 [node name="blunwep" type="Label" parent="TabContainer/Skills/skillbars1"]
-margin_top = 204.0
+margin_top = 216.0
 margin_right = 129.0
-margin_bottom = 218.0
+margin_bottom = 230.0
 text = "Blunt Weapons"
 
 [node name="blunwepbar" type="ProgressBar" parent="TabContainer/Skills/skillbars1"]
-margin_top = 222.0
+margin_top = 234.0
 margin_right = 129.0
-margin_bottom = 236.0
+margin_bottom = 248.0
 rect_min_size = Vector2( 129, 14 )
 max_value = 10.0
 percent_visible = false
@@ -611,7 +568,7 @@ percent_visible = false
 [node name="skillbars3" type="VBoxContainer" parent="TabContainer/Skills"]
 margin_left = 279.297
 margin_top = 5.34538
-margin_right = 395.297
+margin_right = 396.297
 margin_bottom = 253.345
 rect_scale = Vector2( 0.634, 0.736 )
 __meta__ = {
@@ -654,62 +611,63 @@ text = "Confidence"
 [node name="confidencebar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
 margin_top = 90.0
 margin_right = 117.0
-margin_bottom = 92.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 117, 14 )
 max_value = 10.0
 percent_visible = false
 
 [node name="intimidate" type="Label" parent="TabContainer/Skills/skillbars3"]
-margin_top = 96.0
+margin_top = 108.0
 margin_right = 117.0
-margin_bottom = 110.0
+margin_bottom = 122.0
 text = "Intimidation"
 
 [node name="intimidatebar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
-margin_top = 114.0
+margin_top = 126.0
 margin_right = 117.0
-margin_bottom = 128.0
+margin_bottom = 140.0
 rect_min_size = Vector2( 117, 14 )
 max_value = 10.0
 percent_visible = false
 
 [node name="alarmdisarm" type="Label" parent="TabContainer/Skills/skillbars3"]
-margin_top = 132.0
+margin_top = 144.0
 margin_right = 117.0
-margin_bottom = 146.0
+margin_bottom = 158.0
 text = "Alarm Disarming"
 
 [node name="alarmdisbar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
-margin_top = 150.0
+margin_top = 162.0
 margin_right = 117.0
-margin_bottom = 164.0
+margin_bottom = 176.0
 rect_min_size = Vector2( 117, 14 )
 max_value = 10.0
 percent_visible = false
 
 [node name="combatcon" type="Label" parent="TabContainer/Skills/skillbars3"]
-margin_top = 168.0
+margin_top = 180.0
 margin_right = 117.0
-margin_bottom = 182.0
+margin_bottom = 194.0
 text = "Combat Control"
 
 [node name="combatconbar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
-margin_top = 186.0
+margin_top = 198.0
 margin_right = 117.0
-margin_bottom = 200.0
+margin_bottom = 212.0
 rect_min_size = Vector2( 117, 14 )
 max_value = 10.0
 percent_visible = false
 
 [node name="leadership" type="Label" parent="TabContainer/Skills/skillbars3"]
-margin_top = 204.0
+margin_top = 216.0
 margin_right = 117.0
-margin_bottom = 218.0
+margin_bottom = 230.0
 text = "Leadership"
 
 [node name="leadershipbar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
-margin_top = 222.0
+margin_top = 234.0
 margin_right = 117.0
-margin_bottom = 236.0
+margin_bottom = 248.0
 rect_min_size = Vector2( 117, 14 )
 max_value = 10.0
 percent_visible = false
@@ -1017,28 +975,6 @@ margin_top = 144.0
 margin_right = 40.0
 margin_bottom = 164.0
 text = "+"
-
-[node name="next" type="Button" parent="TabContainer/Skills"]
-visible = false
-margin_left = 332.155
-margin_top = 199.293
-margin_right = 374.155
-margin_bottom = 219.293
-text = "Next"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="back" type="Button" parent="TabContainer/Skills"]
-visible = false
-margin_left = 273.292
-margin_top = 198.872
-margin_right = 315.292
-margin_bottom = 218.872
-text = "Back"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="skillpoints" type="Label" parent="TabContainer/Skills"]
 margin_left = 8.40898

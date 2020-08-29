@@ -43,7 +43,7 @@ var skill_dict = {
 "doctor": 0, "perception": 0, "bomb disarming": 0,
 "safe cracking": 0, "electronics": 0, "mechanical repair": 0,
 "confidence": 0, "intimidation": 0, "alarm disarming": 0,
-"combat control": 0, "leadership": 0
+"combat control": 0, "leadership": 0, "blunt weapons": 0
 }
 
 func _ready():
@@ -98,7 +98,7 @@ onready var mech_bar =$"TabContainer/Skills/skillbars3/mechanicbar"
 onready var con_bar = $"TabContainer/Skills/skillbars3/confidencebar"
 onready var intim_bar = $"TabContainer/Skills/skillbars3/intimidatebar"
 onready var alarm_bar = $"TabContainer/Skills/skillbars3/alarmdisbar"
-onready var com_ctr = $"TabContainer/Skills/skillbars3/combatconbar"
+onready var com_ctr_bar = $"TabContainer/Skills/skillbars3/combatconbar"
 onready var lead_bar = $"TabContainer/Skills/skillbars3/leadershipbar"
 
 # all info tab functions
@@ -209,6 +209,46 @@ func update_skill_bar_fill(skill):
 		match skill:
 			"automatic weapons":
 				update_skill_bar(auto_wep_bar, skill)
+			"explosive weapons":
+				update_skill_bar(explos_bar, skill)
+			"energy weapons":
+				update_skill_bar(energy_bar, skill)
+			"long weapons":
+				update_skill_bar(long_bar, skill)
+			"small weapons":
+				update_skill_bar(small_bar, skill)
+			"bladed weapons":
+				update_skill_bar(blade_bar, skill)
+			"blunt weapons":
+				update_skill_bar(blunt_bar, skill)
+			"brawling weapons":
+				update_skill_bar(brawl_bar, skill)
+			"medic":
+				update_skill_bar(medic_bar, skill)
+			"lock picking":
+				update_skill_bar(lock_bar, skill)
+			"doctor":
+				update_skill_bar(doctor_bar, skill)
+			"perception":
+				update_skill_bar(perception_bar, skill)
+			"bomb disarming":
+				update_skill_bar(bomb_bar, skill)
+			"safe cracking":
+				update_skill_bar(safe_bar, skill)
+			"electronics":
+				update_skill_bar(elec_bar, skill)
+			"mechanical repair":
+				update_skill_bar(mech_bar, skill)
+			"confidence":
+				update_skill_bar(con_bar, skill)
+			"intimidation":
+				update_skill_bar(intim_bar, skill)
+			"alarm disarming":
+				update_skill_bar(alarm_bar, skill)
+			"combat control":
+				update_skill_bar(com_ctr_bar, skill)
+			"leadership":
+				update_skill_bar(lead_bar, skill)
 
 func update_skill_display():
 	skill_points_display.text = str(total_skill_points) + " left"
@@ -238,123 +278,124 @@ func _on_autowepdown_pressed():
 	decrease_skill("automatic weapons")
 
 func _on_explodwepup_pressed():
-	pass # Replace with function body.
+	increase_skill("explosive weapons")
 
 func _on_explodwepdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("explosive weapons")
 
 func _on_energwepup_pressed():
-	pass # Replace with function body.
+	increase_skill("energy weapons")
 
 func _on_energwepdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("energy weapons")
 
 func _on_longwepup_pressed():
-	pass # Replace with function body.
+	increase_skill("long weapons")
 
 func _on_longwepdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("long weapons")
 
 func _on_smallwepup_pressed():
-	pass # Replace with function body.
+	increase_skill("small weapons")
 
 func _on_smallwepdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("small weapons")
 
 func _on_bladwepup_pressed():
-	pass # Replace with function body.
+	increase_skill("bladed weapons")
 
 func _on_bladewepdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("bladed weapons")
 
 func _on_blunwepup_pressed():
-	pass # Replace with function body.
+	increase_skill("blunt weapons")
 
 func _on_blunwepdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("blunt weapons")
 
 # row two buttons
 func _on_brawlwepup_pressed():
-	pass # Replace with function body.
+	increase_skill("brawling weapons")
 
 func _on_brawlwepdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("brawling weapons")
 
 func _on_medicup_pressed():
-	pass # Replace with function body.
+	increase_skill("medic")
 
 func _on_medicdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("medic")
 
 func _on_doctorup_pressed():
-	pass # Replace with function body.
+	increase_skill("doctor")
 
 func _on_doctordown_pressed():
-	pass # Replace with function body.
+	decrease_skill("doctor")
 
 func _on_perceptup_pressed():
-	pass # Replace with function body.
+	increase_skill("perception")
 
 func _on_perceptdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("perception")
 
 func _on_lockpickup_pressed():
-	pass # Replace with function body.
+	increase_skill("lock picking")
 
 func _on_lockpickdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("lock picking")
 
 func _on_bombdisup_pressed():
-	pass # Replace with function body.
+	increase_skill("bomb disarming")
 
 func _on_bombdisdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("bomb disarming")
 
 func _on_safecrackup_pressed():
-	pass # Replace with function body.
+	increase_skill("safe cracking")
 
 func _on_safecrackdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("safe cracking")
 
 # row three Buttons
 func _on_elecup_pressed():
-	pass # Replace with function body.
+	increase_skill("electronics")
 
 func _on_elecdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("electronics")
 
 func _on_mechup_pressed():
-	pass # Replace with function body.
+	increase_skill("mechanical repair")
 
 func _on_mechdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("mechanical repair")
 
 func _on_confup_pressed():
-	pass # Replace with function body.
+	increase_skill("confidence")
 
 func _on_confdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("confidence")
 
 func _on_intimidateup_pressed():
-	pass # Replace with function body.
+	increase_skill("intimidation")
 
 func _on_intimidatedown_pressed():
-	pass # Replace with function body.
+	decrease_skill("intimidation")
 
 func _on_alarmdisup_pressed():
-	pass # Replace with function body.
+	increase_skill("alarm disarming")
 
 func _on_alarmdisdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("alarm disarming")
 
 func _on_combatcontup_pressed():
-	pass # Replace with function body.
+	increase_skill("combat control")
 
 func _on_combatcontdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("combat control")
 
 func _on_leaderup_pressed():
-	pass # Replace with function body.
+	increase_skill("leadership")
 
 func _on_leaderdown_pressed():
-	pass # Replace with function body.
+	decrease_skill("leadership")
+	
