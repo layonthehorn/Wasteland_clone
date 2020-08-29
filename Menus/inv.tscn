@@ -1,0 +1,67 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_right = 399.0
+margin_bottom = 259.0
+tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Misc" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -355.0
+margin_bottom = -203.0
+tab_align = 0
+
+[node name="ItemList" type="ItemList" parent="TabContainer/Misc"]
+visible = false
+margin_right = 390.0
+margin_bottom = 200.0
+max_columns = 9
+fixed_column_width = 9
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Weapons" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -355.0
+margin_bottom = -203.0
+tab_align = 0
+
+[node name="ItemList" type="ItemList" parent="TabContainer/Weapons"]
+visible = false
+margin_right = 389.0
+margin_bottom = 199.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Armor" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -355.0
+margin_bottom = -203.0
+
+[node name="ItemList" type="ItemList" parent="TabContainer/Armor"]
+margin_right = 386.0
+margin_bottom = 203.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
