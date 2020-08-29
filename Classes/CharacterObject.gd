@@ -195,10 +195,5 @@ func calc_new_skill_points():
 	else:
 		return BASE_SKILL_POINTS_LEVEL
 
-func _init(char_name, char_race, stat_dictionary = null, skill_dictionary = null):
-	
-	self.race = char_race
-	self.stat_dict = stat_dictionary
-	self.skill_dict = skill_dictionary
-	self.name = char_name
-	update_max_health()
+func _init():
+	pass

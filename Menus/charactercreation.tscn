@@ -19,7 +19,6 @@ __meta__ = {
 }
 
 [node name="Info" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -108,6 +107,7 @@ __meta__ = {
 }
 
 [node name="next" type="Button" parent="TabContainer/Info"]
+visible = false
 margin_left = 332.575
 margin_top = 203.918
 margin_right = 374.575
@@ -118,6 +118,7 @@ __meta__ = {
 }
 
 [node name="back" type="Button" parent="TabContainer/Info"]
+visible = false
 margin_left = 281.701
 margin_top = 203.918
 margin_right = 323.701
@@ -364,6 +365,7 @@ __meta__ = {
 }
 
 [node name="next" type="Button" parent="TabContainer/Attributes"]
+visible = false
 margin_left = 334.677
 margin_top = 192.986
 margin_right = 376.677
@@ -374,6 +376,7 @@ __meta__ = {
 }
 
 [node name="back" type="Button" parent="TabContainer/Attributes"]
+visible = false
 margin_left = 270.769
 margin_top = 192.566
 margin_right = 312.769
@@ -384,6 +387,7 @@ __meta__ = {
 }
 
 [node name="Skills" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -954,6 +958,7 @@ margin_bottom = 164.0
 text = "+"
 
 [node name="next" type="Button" parent="TabContainer/Skills"]
+visible = false
 margin_left = 332.155
 margin_top = 199.293
 margin_right = 374.155
@@ -964,6 +969,7 @@ __meta__ = {
 }
 
 [node name="back" type="Button" parent="TabContainer/Skills"]
+visible = false
 margin_left = 273.292
 margin_top = 198.872
 margin_right = 315.292

@@ -20,8 +20,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = -355.0
-margin_bottom = -203.0
+margin_right = -4.0
+margin_bottom = -4.0
 tab_align = 0
 
 [node name="ItemList" type="ItemList" parent="TabContainer/Misc"]
@@ -35,12 +35,13 @@ __meta__ = {
 }
 
 [node name="Weapons" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = -355.0
-margin_bottom = -203.0
+margin_right = -4.0
+margin_bottom = -4.0
 tab_align = 0
 
 [node name="ItemList" type="ItemList" parent="TabContainer/Weapons"]
@@ -52,12 +53,13 @@ __meta__ = {
 }
 
 [node name="Armor" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = -355.0
-margin_bottom = -203.0
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="ItemList" type="ItemList" parent="TabContainer/Armor"]
 margin_right = 386.0

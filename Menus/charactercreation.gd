@@ -10,6 +10,7 @@ var gender:= "Male"
 var age:= "20"
 var f_name:= ""
 var l_name:= ""
+onready var squad = SquadSingleton
 
 # attribute handling variables
 var total_stat_points:= 7 + 14

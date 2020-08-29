@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Menus/charactercreation.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Menus/CharacterCreationScreen.gd" type="Script" id=2]
+
+[node name="Node" type="Node"]
+script = ExtResource( 2 )
+
+[node name="SquadOne" parent="." instance=ExtResource( 1 )]
+
+[node name="ToSquadTwo" type="Button" parent="SquadOne"]
+margin_left = 337.0
+margin_top = 236.0
+margin_right = 379.0
+margin_bottom = 256.0
+text = "Next"
+
+[node name="SquadTwo" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="ToSquadOne" type="Button" parent="SquadTwo"]
+margin_left = 286.405
+margin_top = 235.595
+margin_right = 327.405
+margin_bottom = 255.595
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToSquadThree" type="Button" parent="SquadTwo"]
+margin_left = 337.0
+margin_top = 236.0
+margin_right = 380.0
+margin_bottom = 256.0
+text = "Next"
+
+[node name="SquadThree" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="ToSquadTwo" type="Button" parent="SquadThree"]
+margin_left = 286.58
+margin_top = 236.0
+margin_right = 327.58
+margin_bottom = 256.0
+text = "Back"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToSquadFour" type="Button" parent="SquadThree"]
+margin_left = 337.0
+margin_top = 236.0
+margin_right = 379.0
+margin_bottom = 256.0
+text = "Next"
+
+[node name="SquadFour" parent="." instance=ExtResource( 1 )]
+visible = false
+
+[node name="ToSquadThree" type="Button" parent="SquadFour"]
+margin_left = 286.0
+margin_top = 236.0
+margin_right = 328.0
+margin_bottom = 256.0
+text = "Back"
+[connection signal="pressed" from="SquadOne/ToSquadTwo" to="." method="_on_ToSquadTwo_pressed"]
+[connection signal="pressed" from="SquadTwo/ToSquadOne" to="." method="_on_ToSquadOne_pressed"]
+[connection signal="pressed" from="SquadTwo/ToSquadThree" to="." method="_on_ToSquadThree_pressed"]
+[connection signal="pressed" from="SquadThree/ToSquadTwo" to="." method="_on_ToSquadTwo_pressed"]
+[connection signal="pressed" from="SquadThree/ToSquadFour" to="." method="_on_ToSquadFour_pressed"]
+[connection signal="pressed" from="SquadFour/ToSquadThree" to="." method="_on_ToSquadThree_pressed"]
