@@ -48,6 +48,7 @@ var skill_dict = {
 
 func _ready():
 	update_stat_points()
+	update_skill_display()
 	for species in RACES:
 		race_select.add_item(species)
 	for gend in GENDERS:
@@ -100,9 +101,6 @@ onready var alarm_bar = $"TabContainer/Skills/skillbars3/alarmdisbar"
 onready var com_ctr = $"TabContainer/Skills/skillbars3/combatconbar"
 onready var lead_bar = $"TabContainer/Skills/skillbars3/leadershipbar"
 
-func update_bar(bar, stat):
-	bar.value = stat_dict[stat] 
-
 # all info tab functions
 func _on_raceselect_item_selected(index):
 	race = RACES[index]
@@ -124,6 +122,9 @@ func _on_bioentry_text_changed():
 	bio = bio_entry.text
 
 # all Attribute tab functions
+func update_bar(bar, stat):
+	bar.value = stat_dict[stat] 
+
 func _on_strengthup_pressed():
 	increase_stat("strength")
 
@@ -201,14 +202,37 @@ func update_stat_points():
 	att_point_display.text = str(total_stat_points) + " left"
 
 # skill tab actions
+func update_skill_bar(bar, stat):
+	bar.value = skill_dict[stat] 
+
+func update_skill_bar_fill(skill):
+		match skill:
+			"automatic weapons":
+				update_skill_bar(auto_wep_bar, skill)
+
+func update_skill_display():
+	skill_points_display.text = str(total_skill_points) + " left"
+
 func increase_skill(skill):
 	var current_skill_level = skill_dict[skill]
-	if total_stat_points >= SKILL_COST_DICT[current_skill_level +1 ]:
+	print(SKILL_COST_DICT[current_skill_level + 1])
+	if total_skill_points >= SKILL_COST_DICT[current_skill_level + 1]:
 		if current_skill_level < 10:
-			pass
+			total_skill_points -= SKILL_COST_DICT[current_skill_level + 1]
+			skill_dict[skill] += 1
+			update_skill_bar_fill(skill)
+			update_skill_display()
 
 func decrease_skill(skill):
 	var current_skill_level = skill_dict[skill]
-	if current_skill_level > 1:
+	if current_skill_level > 0:
 		total_skill_points += SKILL_COST_DICT[current_skill_level]
 		skill_dict[skill] -= 1
+		update_skill_bar_fill(skill)
+		update_skill_display()
+
+func _on_autowepup_pressed():
+	increase_skill("automatic weapons")
+
+func _on_autowepdown_pressed():
+	decrease_skill("automatic weapons")
