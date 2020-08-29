@@ -8,6 +8,9 @@
 [ext_resource path="res://Menus/menubar.tscn" type="PackedScene" id=6]
 
 [node name="TestWorld" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="YSort" type="YSort" parent="."]
 
@@ -45,13 +48,13 @@ __meta__ = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 position = Vector2( 152, 88 )
 current = true
 smoothing_enabled = true
-smoothing_speed = 10.0
 
 [node name="Control" parent="Camera2D" instance=ExtResource( 6 )]
+offset = Vector2( 21, 4 )
+transform = Transform2D( 1, 0, 0, 1, 21, 4 )
 
 [node name="E_Prompt" parent="." instance=ExtResource( 3 )]
 position = Vector2( -15.8919, 38.4055 )
