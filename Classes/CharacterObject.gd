@@ -33,7 +33,7 @@ enum COMBAT_STATE {
 }
 
 var f_name:= "" setget f_name_set, f_name_get
-var l_name:= "" setget l_name_set, f_name_get
+var l_name:= "" setget l_name_set, l_name_get
 var health:= 0 setget health_set, health_get
 var level:= BASE_LEVEL setget level_set, level_get
 var crit_chance:= BASE_CRIT setget crit_chance_set, crit_chance_get
@@ -41,6 +41,7 @@ var max_health:= 0 setget max_health_set, max_health_get
 var experience:= BASE_EXP setget experience_set, experience_get
 var skill_points:= BASE_SKILL_POINTS setget skill_points_set, skill_points_get
 var race:= "" setget race_set, race_get
+var age:= "" setget age_set, age_get
 var bio:= "" setget bio_set, bio_get
 var gender:= "" setget gender_set, gender_get
 var primary:= "" setget primary_set, primary_get
@@ -69,6 +70,12 @@ var stat_dict = null
 var skill_dict = null
 # character state
 var character_state = COMBAT_STATE.ALIVE
+
+func age_get():
+	return age
+
+func age_set(value):
+	age = value
 
 func secondary_get():
 	return secondary

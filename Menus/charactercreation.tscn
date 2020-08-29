@@ -997,6 +997,11 @@ margin_left = 4.0
 margin_top = 32.0
 margin_right = -4.0
 margin_bottom = -4.0
+[connection signal="text_changed" from="TabContainer/Info/infobox/firstnameentry" to="." method="_on_firstnameentry_text_changed"]
+[connection signal="text_changed" from="TabContainer/Info/infobox/lastnameentry" to="." method="_on_lastnameentry_text_changed"]
+[connection signal="item_selected" from="TabContainer/Info/infobox/raceselect" to="." method="_on_raceselect_item_selected"]
+[connection signal="item_selected" from="TabContainer/Info/infobox/genderselect" to="." method="_on_genderselect_item_selected"]
+[connection signal="item_selected" from="TabContainer/Info/infobox/ageselect" to="." method="_on_ageselect_item_selected"]
 [connection signal="pressed" from="TabContainer/Attributes/downbuttons/strengthdown" to="." method="_on_strengthdown_pressed"]
 [connection signal="pressed" from="TabContainer/Attributes/downbuttons/intelligencedown" to="." method="_on_intelligencedown_pressed"]
 [connection signal="pressed" from="TabContainer/Attributes/downbuttons/luckdown" to="." method="_on_luckdown_pressed"]

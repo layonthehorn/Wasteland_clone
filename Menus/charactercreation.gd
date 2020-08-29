@@ -10,7 +10,7 @@ var gender:= "Male"
 var age:= "20"
 var f_name:= ""
 var l_name:= ""
-onready var squad = SquadSingleton
+var bio:= ""
 
 # attribute handling variables
 var total_stat_points:= 7 + 14
@@ -24,6 +24,8 @@ var stat_dict = {"strength": 1,
 
 # skill point handling variables
 var total_skill_points:= 12
+var skill_dict = {}
+
 
 func update_stat_points():
 	att_point_display.text = str(total_stat_points) + " left"
