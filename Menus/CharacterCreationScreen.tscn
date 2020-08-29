@@ -65,10 +65,10 @@ margin_right = 328.0
 margin_bottom = 256.0
 text = "Back"
 
-[node name="Finished" type="Button" parent="."]
+[node name="Finished" type="Button" parent="SquadFour"]
 margin_left = 177.0
 margin_top = 237.0
-margin_right = 230.0
+margin_right = 243.0
 margin_bottom = 257.0
 text = "Finished"
 __meta__ = {
@@ -80,4 +80,4 @@ __meta__ = {
 [connection signal="pressed" from="SquadThree/ToSquadTwo" to="." method="_on_ToSquadTwo_pressed"]
 [connection signal="pressed" from="SquadThree/ToSquadFour" to="." method="_on_ToSquadFour_pressed"]
 [connection signal="pressed" from="SquadFour/ToSquadThree" to="." method="_on_ToSquadThree_pressed"]
-[connection signal="pressed" from="Finished" to="." method="_on_Finished_pressed"]
+[connection signal="pressed" from="SquadFour/Finished" to="." method="_on_Finished_pressed"]

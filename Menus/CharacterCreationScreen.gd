@@ -44,6 +44,7 @@ func _on_Finished_pressed():
 		squad_storage.squad_list[count].gender = member.gender
 		squad_storage.squad_list[count].skill_dict = member.skill_dict
 		squad_storage.squad_list[count].stat_dict = member.stat_dict
+		squad_storage.squad_list[count].update_max_health()
 		count += 1
 		
 	for member in SquadSingleton.squad_list:

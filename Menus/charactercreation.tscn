@@ -19,6 +19,7 @@ __meta__ = {
 }
 
 [node name="Info" type="Tabs" parent="TabContainer"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -387,7 +388,6 @@ __meta__ = {
 }
 
 [node name="Skills" type="Tabs" parent="TabContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -414,6 +414,9 @@ text = "Automatic Weapons"
 margin_top = 18.0
 margin_right = 129.0
 margin_bottom = 32.0
+rect_min_size = Vector2( 129, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="exploswep" type="Label" parent="TabContainer/Skills/skillbars1"]
 margin_top = 36.0
@@ -425,6 +428,9 @@ text = "Explosive Weapons"
 margin_top = 54.0
 margin_right = 129.0
 margin_bottom = 68.0
+rect_min_size = Vector2( 129, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="energwep" type="Label" parent="TabContainer/Skills/skillbars1"]
 margin_top = 72.0
@@ -436,6 +442,8 @@ text = "Energy Weapons"
 margin_top = 90.0
 margin_right = 129.0
 margin_bottom = 104.0
+max_value = 10.0
+percent_visible = false
 
 [node name="longwep" type="Label" parent="TabContainer/Skills/skillbars1"]
 margin_top = 108.0
@@ -447,6 +455,9 @@ text = "Long Weapons"
 margin_top = 126.0
 margin_right = 129.0
 margin_bottom = 140.0
+rect_min_size = Vector2( 129, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="smallwep" type="Label" parent="TabContainer/Skills/skillbars1"]
 margin_top = 144.0
@@ -458,6 +469,9 @@ text = "Small Weapons"
 margin_top = 162.0
 margin_right = 129.0
 margin_bottom = 176.0
+rect_min_size = Vector2( 129, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="bladwep" type="Label" parent="TabContainer/Skills/skillbars1"]
 margin_top = 180.0
@@ -469,6 +483,9 @@ text = "Bladed Weapons"
 margin_top = 198.0
 margin_right = 129.0
 margin_bottom = 212.0
+rect_min_size = Vector2( 129, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="blunwep" type="Label" parent="TabContainer/Skills/skillbars1"]
 margin_top = 216.0
@@ -480,6 +497,9 @@ text = "Blunt Weapons"
 margin_top = 234.0
 margin_right = 129.0
 margin_bottom = 248.0
+rect_min_size = Vector2( 129, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="skillbars2" type="VBoxContainer" parent="TabContainer/Skills"]
 margin_left = 153.235
@@ -500,6 +520,9 @@ text = "Brawling Weapons"
 margin_top = 18.0
 margin_right = 117.0
 margin_bottom = 32.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="medic" type="Label" parent="TabContainer/Skills/skillbars2"]
 margin_top = 36.0
@@ -511,6 +534,9 @@ text = "Medic"
 margin_top = 54.0
 margin_right = 117.0
 margin_bottom = 68.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="doctor" type="Label" parent="TabContainer/Skills/skillbars2"]
 margin_top = 72.0
@@ -522,6 +548,9 @@ text = "Doctor"
 margin_top = 90.0
 margin_right = 117.0
 margin_bottom = 104.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="perception" type="Label" parent="TabContainer/Skills/skillbars2"]
 margin_top = 108.0
@@ -533,6 +562,9 @@ text = "Perception"
 margin_top = 126.0
 margin_right = 117.0
 margin_bottom = 140.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="lockpick" type="Label" parent="TabContainer/Skills/skillbars2"]
 margin_top = 144.0
@@ -544,6 +576,9 @@ text = "Lock Picking"
 margin_top = 162.0
 margin_right = 117.0
 margin_bottom = 176.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="bombdisarm" type="Label" parent="TabContainer/Skills/skillbars2"]
 margin_top = 180.0
@@ -555,6 +590,9 @@ text = "Bomb Disarming"
 margin_top = 198.0
 margin_right = 117.0
 margin_bottom = 212.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="safecrack" type="Label" parent="TabContainer/Skills/skillbars2"]
 margin_top = 216.0
@@ -566,6 +604,9 @@ text = "Safe Cracking"
 margin_top = 234.0
 margin_right = 117.0
 margin_bottom = 248.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="skillbars3" type="VBoxContainer" parent="TabContainer/Skills"]
 margin_left = 279.297
@@ -578,80 +619,100 @@ __meta__ = {
 }
 
 [node name="electronics" type="Label" parent="TabContainer/Skills/skillbars3"]
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 14.0
 text = "Electronics"
 
 [node name="electronicsbar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
 margin_top = 18.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 32.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="mechanic" type="Label" parent="TabContainer/Skills/skillbars3"]
 margin_top = 36.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 50.0
 text = "Mechanical Repair"
 
 [node name="mechanicbar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
 margin_top = 54.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 68.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="confidence" type="Label" parent="TabContainer/Skills/skillbars3"]
 margin_top = 72.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 86.0
 text = "Confidence"
 
 [node name="confidencebar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
 margin_top = 90.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 104.0
+max_value = 10.0
+percent_visible = false
 
 [node name="intimidate" type="Label" parent="TabContainer/Skills/skillbars3"]
 margin_top = 108.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 122.0
 text = "Intimidation"
 
 [node name="intimidatebar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
 margin_top = 126.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 140.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="alarmdisarm" type="Label" parent="TabContainer/Skills/skillbars3"]
 margin_top = 144.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 158.0
 text = "Alarm Disarming"
 
 [node name="alarmdisbar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
 margin_top = 162.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 176.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="combatcon" type="Label" parent="TabContainer/Skills/skillbars3"]
 margin_top = 180.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 194.0
 text = "Combat Control"
 
 [node name="combatconbar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
 margin_top = 198.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 212.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="leadership" type="Label" parent="TabContainer/Skills/skillbars3"]
 margin_top = 216.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 230.0
 text = "Leadership"
 
 [node name="leadershipbar" type="ProgressBar" parent="TabContainer/Skills/skillbars3"]
 margin_top = 234.0
-margin_right = 116.0
+margin_right = 117.0
 margin_bottom = 248.0
+rect_min_size = Vector2( 117, 14 )
+max_value = 10.0
+percent_visible = false
 
 [node name="skilldown1" type="VBoxContainer" parent="TabContainer/Skills"]
 margin_right = 40.0
@@ -984,7 +1045,6 @@ margin_left = 8.40898
 margin_top = 203.077
 margin_right = 159.409
 margin_bottom = 217.077
-text = "You have {x} points left."
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -1002,6 +1062,7 @@ margin_bottom = -4.0
 [connection signal="item_selected" from="TabContainer/Info/infobox/raceselect" to="." method="_on_raceselect_item_selected"]
 [connection signal="item_selected" from="TabContainer/Info/infobox/genderselect" to="." method="_on_genderselect_item_selected"]
 [connection signal="item_selected" from="TabContainer/Info/infobox/ageselect" to="." method="_on_ageselect_item_selected"]
+[connection signal="text_changed" from="TabContainer/Info/bioentry" to="." method="_on_bioentry_text_changed"]
 [connection signal="pressed" from="TabContainer/Attributes/downbuttons/strengthdown" to="." method="_on_strengthdown_pressed"]
 [connection signal="pressed" from="TabContainer/Attributes/downbuttons/intelligencedown" to="." method="_on_intelligencedown_pressed"]
 [connection signal="pressed" from="TabContainer/Attributes/downbuttons/luckdown" to="." method="_on_luckdown_pressed"]
